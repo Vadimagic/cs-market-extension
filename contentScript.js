@@ -8,11 +8,6 @@ function checkDescriptionItem() {
 			const name = getName(listDescription[i].innerText)
 			if (name) {
 				const div = document.createElement("div")
-				// link.setAttribute(
-				// 	"href",
-				// 	`https://steamcommunity.com/market/listings/730/${name} (Factory New)`
-				// )
-				// link.setAttribute("target", "blank")
 				div.innerText = listDescription[i].innerText
 				const divTooltipText = document.createElement("div")
 				divTooltipText.className = "cs-extension-tooltip-text"
