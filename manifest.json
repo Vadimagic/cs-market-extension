@@ -1,0 +1,25 @@
+{
+	"name": "Extension for CS:GO market",
+	"version": "1.0",
+	"description": "Extension for CS:GO market",
+	"permissions": ["tabs", "scripting"],
+	"host_permissions": ["https://steamcommunity.com/market/listings/730/*"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://steamcommunity.com/market/listings/730/*"],
+			"js": ["contentScript.js"]
+		}
+	],
+	"action": {
+		"default_title": "Extension for CS:GO market",
+		"default_icon": {
+			"16": "./assets/cs-extension-16.png",
+			"24": "./assets/cs-extension-24.png",
+			"32": "./assets/cs-extension-32.png"
+		}
+	},
+	"manifest_version": 3
+}

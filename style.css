@@ -1,0 +1,49 @@
+.item_desc_descriptors {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.cs-extension-tooltip {
+	position: relative;
+	display: inline-block;
+}
+
+.cs-extension-tooltip-text {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	z-index: 1;
+	bottom: 14px;
+
+	background-color: #1b2838;
+	border: 2px solid #171a21;
+	padding: 5px 10px;
+	border-radius: 4px;
+
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.5s;
+	min-width: 95px;
+}
+
+.cs-extension-tooltip .cs-extension-tooltip-text::after {
+	content: "";
+	position: absolute;
+	bottom: -11px;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: white transparent transparent transparent;
+}
+
+.cs-extension-tooltip:hover .cs-extension-tooltip-text {
+	visibility: visible;
+	opacity: 1;
+}
+
+.cs-extension-tooltip-text a:hover {
+	color: rgb(75, 105, 255);
+}
